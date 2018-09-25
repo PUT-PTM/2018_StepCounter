@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PokeWalker Polibuda ver</string>
+    <string name="Button_Reset">Reset</string>
+    <string name="Button_Save">Save</string>
+    <string name="Button_Connect">Connect</string>
+    <string name="Button_Evolve">Evolve</string>
+    <string name="Steps" />
+</resources>
