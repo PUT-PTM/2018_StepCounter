@@ -34,4 +34,5 @@
 "src/main.o"
 "src/syscalls.o"
 "src/system_stm32f4xx.o"
+"src/tm_stm32f4_lis302dl_lis3dsh.o"
 "startup/startup_stm32f4xx.o"

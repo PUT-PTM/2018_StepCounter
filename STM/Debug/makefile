@@ -29,13 +29,13 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: libptmproj.elf
+all: proj1.elf
 
 # Tool invocations
-libptmproj.elf: $(OBJS) $(USER_OBJS) C:\Users\HP\workspace1\ptmproj\LinkerScript.ld
+proj1.elf: $(OBJS) $(USER_OBJS) C:\Users\HP\workspace1\proj1\LinkerScript.ld
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU GCC Linker'
-	arm-none-eabi-gcc -mthumb -mfloat-abi=soft -shared -T"C:\Users\HP\workspace1\ptmproj\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "libptmproj.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T"C:\Users\HP\workspace1\proj1\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "proj1.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lm
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
@@ -47,8 +47,8 @@ clean:
 
 post-build:
 	-@echo 'Generating binary and Printing size information:'
-	arm-none-eabi-objcopy -O binary "libptmproj.elf" "libptmproj.bin"
-	arm-none-eabi-size "ptmproj.elf"
+	arm-none-eabi-objcopy -O binary "proj1.elf" "proj1.bin"
+	arm-none-eabi-size "proj1.elf"
 	-@echo ' '
 
 .PHONY: all clean dependents
