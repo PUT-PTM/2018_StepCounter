@@ -14,6 +14,7 @@ Zebrane kroki sa nastepnie przeliczane na doświadczenie i umożliwiają użytko
 ## Konfiguracja oraz uruchomienie:
 
 Piny modułu bluetooth należy podłączyć w następujący sposób do pinów na płytce:
+
 Vcc -> 3.3V
 GND -> GND
 TxD -> PC11
